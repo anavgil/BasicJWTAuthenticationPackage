@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
         VERSION: 1.0.3
-        PATH_BASE: '/home/runner/work/BasicJWTAuthenticationPackage/BasicJWTAuthenticationPackage/JwtAuthenticationPackage/bin/Release'
+        #PATH_BASE: '/home/runner/work/BasicJWTAuthenticationPackage/BasicJWTAuthenticationPackage/JwtAuthenticationPackage/bin/Release'
+        PATH_BASE: "$GITHUB_ACTION_PATH"
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
