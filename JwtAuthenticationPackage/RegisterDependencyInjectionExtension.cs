@@ -28,6 +28,7 @@ namespace JwtAuthenticationPackage
                     };
                 });
 
+            serviceContainer.AddAuthorization();
 
             return serviceContainer;
         }
