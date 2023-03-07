@@ -14,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-        VERSION: 1.0.${GITHUB_RUN_NUMBER}
+        VERSION: 1.0.${{GITHUB_RUN_NUMBER}}
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
