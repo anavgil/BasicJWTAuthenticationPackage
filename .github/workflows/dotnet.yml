@@ -24,11 +24,16 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3.1.2
+    - name: Publish NuGet (Private Nuget.Server)
+      # You may pin to the exact commit or the version.
+      # uses: rollycodes/publish-nuget-private@c67b9a113c5871124d37592cf95fb8e7a0cf1a37
+      uses: rollycodes/publish-nuget-private@v3.0.1
       with:
-        # Artifact name
-        name: JwtAuthenticationPackage
-            # A file, directory or wildcard pattern that describes what to upload
-        path: ./bin/release/*.nupkg
-            # The desired behavior if no files are found using the provided path.
+        # Filepath of the project to be packaged, relative to root of repository
+        PROJECT_FILE_PATH: /home/runner/work/BasicJWTAuthenticationPackage/BasicJWTAuthenticationPackage/JwtAuthenticationPackage/JwtAuthenticationPackage.csproj
+        # NuGet package id, used for version detection & defaults to project name
+        PACKAGE_NAME: JwtAuthenticationPackage
+        # API key to authenticate with NuGet server
+        NUGET_KEY: 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
+        # NuGet server uri hosting the packages, defaults to https://api.nuget.org
+        NUGET_SOURCE: https://nuget.pkg.github.com/anavgil
