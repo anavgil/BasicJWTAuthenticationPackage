@@ -24,12 +24,16 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Publish NuGet
+    - name: Publish NuGet (Private Nuget.Server)
       # You may pin to the exact commit or the version.
-      # uses: brandedoutcast/publish-nuget@c12b8546b67672ee38ac87bea491ac94a587f7cc
-      uses: brandedoutcast/publish-nuget@v2.5.5
+      # uses: rollycodes/publish-nuget-private@c67b9a113c5871124d37592cf95fb8e7a0cf1a37
+      uses: rollycodes/publish-nuget-private@v3.0.1
       with:
         # Filepath of the project to be packaged, relative to root of repository
-        PROJECT_FILE_PATH: ./JwtAuthenticationPackage
+        PROJECT_FILE_PATH: ./
         # NuGet package id, used for version detection & defaults to project name
         PACKAGE_NAME: JwtAuthenticationPackage
+        # API key to authenticate with NuGet server
+        NUGET_KEY: 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
+        # NuGet server uri hosting the packages, defaults to https://api.nuget.org
+        NUGET_SOURCE: https://nuget.pkg.github.com/anavgil
