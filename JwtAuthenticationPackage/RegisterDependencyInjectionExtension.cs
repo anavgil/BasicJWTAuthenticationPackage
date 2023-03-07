@@ -12,6 +12,7 @@ namespace JwtAuthenticationPackage
     {
         public static IServiceCollection RegisterJwtAuthentication(this IServiceCollection serviceContainer,IConfiguration configuration)
         {
+            serviceContainer.AddHttpContextAccessor();
             serviceContainer.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -27,6 +28,7 @@ namespace JwtAuthenticationPackage
                     };
                 });
 
+            serviceContainer.AddAuthorization();
 
 
             return serviceContainer;

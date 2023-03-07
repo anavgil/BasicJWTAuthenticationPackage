@@ -6,6 +6,11 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>JwtAuthenticationPackage</Title>
+	<Version>1.0.2</Version>
+	<Authors>Anavgil</Authors>
+	<Company>GitHub</Company>
+    <PackageDescription>JWT authentication package</PackageDescription>
+	<RepositoryUrl>https://github.com/anavgil/BasicJWTAuthenticationPackage</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
