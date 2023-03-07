@@ -30,7 +30,7 @@ jobs:
       uses: rollycodes/publish-nuget-private@v3.0.1
       with:
         # Filepath of the project to be packaged, relative to root of repository
-        PROJECT_FILE_PATH: /home/runner/work/BasicJWTAuthenticationPackage/BasicJWTAuthenticationPackage/JwtAuthenticationPackage
+        PROJECT_FILE_PATH: /home/runner/work/BasicJWTAuthenticationPackage/BasicJWTAuthenticationPackage/JwtAuthenticationPackage/JwtAuthenticationPackage.csproj
         # NuGet package id, used for version detection & defaults to project name
         PACKAGE_NAME: JwtAuthenticationPackage
         # API key to authenticate with NuGet server
