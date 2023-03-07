@@ -28,4 +28,4 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${VERSION}
     - name: Push
-      run: dotnet nuget push JwtAuthenticationPackage.${VERSION}.nupkg --source https://nuget.pkg.github.com/anavgil/index.json --api-key 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
+      run: dotnet nuget push ${GITHUB_ACTION_PATH}/JwtAuthenticationPackage.${VERSION}.nupkg --source https://nuget.pkg.github.com/anavgil/index.json --api-key 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
